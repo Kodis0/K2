@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class StateChase : StateMachineBehaviour
+{
+    NavMeshAgent agent;
+    Transform player;
+    public float speed = 3.5f;
+    public float AttackDist = 2.5f;
+
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        agent = animator.GetComponent<NavMeshAgent>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        agent.speed = speed;
+    }
+
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        agent.SetDestination(player.position);
+        float distance = Vector3.Distance(player.position, animator.transform.position);
+        if (distance > 15)
+        {
+            animator.SetBool("IsChasing", false);
+        }
+        if (distance < AttackDist)
+        {
+            animator.SetBool("IsAttacking", true);
+        }
+    }
+
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+       agent.SetDestination(animator.transform.position);
+    }
+}

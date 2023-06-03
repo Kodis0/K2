@@ -28,7 +28,7 @@ public class Katana : MonoBehaviour
         cold.Shoot_Sound();
         StartCoroutine(KatanaResetAttackCooldown());
     }
-
+    
     IEnumerator KatanaResetAttackCooldown()
     {
         StartCoroutine(KatanaResetAttackBool());

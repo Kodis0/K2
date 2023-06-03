@@ -8,6 +8,16 @@ public class WeaponSwitch : MonoBehaviour
     public GameObject katana;
     public GameObject grappleGun;
     public GameObject player;
+
+    private void Start()
+    {
+        player.GetComponent<Katana>().enabled = true;
+        player.GetComponent<Grappling>().enabled = false;
+        player.GetComponent<SwingingDone>().enabled = false;
+        Animator anim = katana.GetComponent<Animator>();
+        anim.SetBool("Ready", true);
+        grappleGun.SetActive(false);
+    }
     void Update()
     {
         UseWeapon();

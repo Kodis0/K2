@@ -25,6 +25,9 @@ public class ColDec : MonoBehaviour
                 AudioSource sos = GetComponent<AudioSource>();
                 sos.PlayOneShot(SlashObjSound);
             }
+            if (hit.collider.tag == "Enemy")
+            {   
+            }
         }
         else
         {
