@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float RunSpeed;
     public float CurrentSpeed;
     public float swingSpeed;
+    public float wallrunSpeed;
 
     public float groundDrag;
 
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     public enum MovementState
     {
         freeze,
+        wallrunning,
         walking,
         grappling,
         swinging,
@@ -52,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool activeGrapple;
     public bool swinging;
+    public bool wallrunning;
 
     private void Start()
     {
@@ -138,6 +141,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void StateHandler()
     {
+        //Вол ранинг мод
+        if(wallrunning)
+        {
+            state = MovementState.wallrunning;
+        }
         if (freeze)
         {
             state = MovementState.freeze;
