@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float CurrentSpeed;
     public float swingSpeed;
     public float wallrunSpeed;
+    public float grappleSpeed = 10f;
 
     public float groundDrag;
 
@@ -53,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     public bool freeze;
 
     public bool activeGrapple;
+    public bool stopGrapple;
     public bool swinging;
     public bool wallrunning;
 
@@ -156,7 +158,13 @@ public class PlayerMovement : MonoBehaviour
         else if (activeGrapple)
         {
             state = MovementState.grappling;
-            moveSpeed = RunSpeed;
+            CurrentSpeed = RunSpeed;
+            if (activeGrapple == false)
+            {
+                moveSpeed = grappleSpeed;
+                CurrentSpeed = grappleSpeed;
+            }
+                          
         }
         else if (swinging)
         {
