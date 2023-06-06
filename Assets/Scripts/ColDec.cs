@@ -8,6 +8,7 @@ public class ColDec : MonoBehaviour
     public Camera cum;
     public AudioClip SlashObjSound;
     public AudioClip SlashAirSound;
+    public Yasher yasher;
 
     private void Update()
     {
@@ -26,7 +27,8 @@ public class ColDec : MonoBehaviour
                 sos.PlayOneShot(SlashObjSound);
             }
             if (hit.collider.tag == "Enemy")
-            {   
+            { 
+                yasher.die();
             }
         }
         else

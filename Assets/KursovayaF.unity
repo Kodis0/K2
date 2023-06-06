@@ -1196,6 +1196,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6988945, y: 9.5782, z: 1.4991776}
   m_Center: {x: -0.18025398, y: 4.289099, z: 0.03546635}
+--- !u!114 &428577414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428577408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63d52c011dbd964ab722d15b1c935d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &437877863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,15 +2262,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a3d979efc6dd74bab16321615e4144, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a3d979efc6dd74bab16321615e4144, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a3d979efc6dd74bab16321615e4144, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6a3d979efc6dd74bab16321615e4144, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2641,6 +2653,7 @@ MonoBehaviour:
   CurrentSpeed: 2
   swingSpeed: 12
   wallrunSpeed: 8.5
+  grappleSpeed: 10
   groundDrag: 5
   jumpForce: 12
   jumpCooldown: 0.25
@@ -2654,6 +2667,7 @@ MonoBehaviour:
   state: 0
   freeze: 0
   activeGrapple: 0
+  stopGrapple: 0
   swinging: 0
   wallrunning: 0
 --- !u!114 &1087453833
@@ -4646,7 +4660,7 @@ GameObject:
   - component: {fileID: 2128587736}
   m_Layer: 0
   m_Name: CameraHolder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4696,6 +4710,7 @@ MonoBehaviour:
   cum: {fileID: 181354305}
   SlashObjSound: {fileID: 8300000, guid: a64db036f87cc014fbceac8a599aebfb, type: 3}
   SlashAirSound: {fileID: 8300000, guid: be8bc4d2d369cfa4886acaadf9c971e7, type: 3}
+  yasher: {fileID: 428577414}
 --- !u!82 &2128587736
 AudioSource:
   m_ObjectHideFlags: 0
