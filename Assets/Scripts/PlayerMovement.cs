@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement")]
+    [Header("Movement")]//
     public float moveSpeed;
     public float RunSpeed;
     public float CurrentSpeed;
     public float swingSpeed;
-    public float wallrunSpeed;
     public float grappleSpeed = 10f;
 
     public float groundDrag;

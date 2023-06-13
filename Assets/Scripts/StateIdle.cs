@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateIdle : StateMachineBehaviour
 {
-    Transform player;
+    Transform player;//
     public float ChaseDist = 8;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

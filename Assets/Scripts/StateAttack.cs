@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class StateAttack : StateMachineBehaviour
 {
-    Transform player;
+    Transform player;//
     public float AttackDist = 3.5f;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

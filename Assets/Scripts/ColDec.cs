@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColDec : MonoBehaviour
 {
-    public Katana katana;
+    public Katana katana;//
     public Camera cum;
     public AudioClip SlashObjSound;
     public AudioClip SlashAirSound;

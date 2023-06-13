@@ -5,7 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class WeaponSwitch : MonoBehaviour
 {
-    public GameObject katana;
+    public GameObject katana;//
     public GameObject grappleGun;
     public GameObject player;
 

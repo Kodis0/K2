@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class StateChase : StateMachineBehaviour
 {
-    NavMeshAgent agent;
+    NavMeshAgent agent;//
     Transform player;
     public float speed = 3.5f;
     public float AttackDist = 2.5f;

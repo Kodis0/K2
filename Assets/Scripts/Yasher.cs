@@ -6,6 +6,6 @@ public class Yasher : MonoBehaviour
 {
     public void die()
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject);//
     }
 }

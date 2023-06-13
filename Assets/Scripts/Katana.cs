@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Katana : MonoBehaviour
 {
-    [Header("Katana")]
+    [Header("Katana")]//
     public GameObject katana;
     public float KatanaAttackCooldown;
     public float KatanaRange;
